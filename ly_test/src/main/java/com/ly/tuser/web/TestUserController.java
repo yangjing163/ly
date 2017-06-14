@@ -111,6 +111,11 @@ public class TestUserController {
 		return JSON.toJSONString(resultMap);
 	}
 	
+	/**
+	 * 修改用户
+	 * @param entity
+	 * @return
+	 */
 	@RequestMapping("/put")
 	@ResponseBody
     public String put(TestUser entity) {

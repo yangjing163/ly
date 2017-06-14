@@ -119,8 +119,10 @@ public class TestUserController {
 	@RequestMapping("/put")
 	@ResponseBody
     public String put(TestUser entity) {
+		//表单验证
 		Map<String, Object> resultMap = testUserService.valiUserValue(entity);
 		if((Boolean)resultMap.get("result")){
+			//修改用户信息
 			 resultMap = testUserService.update(entity);
 		}
 		return JSON.toJSONString(resultMap);
